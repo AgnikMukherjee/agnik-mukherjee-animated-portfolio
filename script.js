@@ -156,10 +156,11 @@ document.querySelectorAll('#full-div1 .mobile-nav h4').forEach(button => {
         closeFullScreenMenu();
         
         setTimeout(() => {
-            document.querySelector(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
-        }, 300); 
+            const target = document.querySelector(targetId);
+            if (target && window.scrollInstance) {
+                window.scrollInstance.scrollTo(target);
+            }
+        }, 300);  
     });
 });
 
