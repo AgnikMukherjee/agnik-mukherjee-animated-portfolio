@@ -1,0 +1,1333 @@
+@font-face {
+    font-family: neu;
+    src: url(./NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 100;
+    src: url(./NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+    font-family: neu;
+    font-weight: 200;
+    src: url(./NeueHaasDisplayRoman.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: neu;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    
+}
+
+#page1 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw 2vw;
+}
+nav img{
+        visibility: hidden !important; /* Hides but keeps space reserved */
+
+}
+
+nav{
+    padding: 2vw 3vw;
+     height: 100px;
+     width: 100%;
+     /* background-color: ; */
+     display: flex;
+     align-items: center;
+     position: relative;
+     z-index: 100;
+     justify-content: space-between;
+     
+}
+
+
+#nav-part2 {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+
+#nav-part2 h4 {
+    padding: 10px 20px;
+    border: 1px solid #00000075;
+    border-radius: 50px;
+    font-weight: 500;
+    color: #000000bb;
+    transition: all ease 0.4s;
+    position: relative;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+#nav-part2 h4::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    left: 0;
+    bottom: -100%;
+    border-radius: 50%;
+    transition: all ease 0.4s;
+}
+
+#nav-part2 h4:hover::after {
+    bottom: 0;
+    border-radius: 0;
+}
+
+#nav-part2 h4 a {
+    color: #000000bb;
+    text-decoration: none;
+    position: relative;
+    z-index: 9;
+}
+
+#nav-part2 h4:hover a {
+    color: #fff;
+}
+
+nav h3{
+    display: none;
+}
+nav h3 .hamburger{border: none;}
+
+
+#centre {
+    height: 65vh;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between; 
+    gap: 40vw;
+    border-bottom: 1px solid #0000003c;
+    padding-bottom: 2.5vw;
+}
+
+#left h3{
+    width: 25vh;
+    font-size: 8vh;
+    text-align: left;
+    line-height: 8vh;
+}
+
+#centre h1{
+    font-size: 10vw;
+    text-align: right;
+    line-height: 8vw ;
+}
+
+#page1 video {
+    position: relative;
+    width: 100%;
+    border-radius: 40px;
+}
+
+#hero-shape {
+    position: absolute;
+    width: 46vw;
+    height: 36vw;
+    right: -1vw;
+    top: 67vh;
+}
+
+#hero1 {
+    background-color: #213448;
+    height: 100%;
+    width: 100%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(25px);
+    position: absolute;
+}
+#hero2 {
+    background: linear-gradient(#213448, #547792);
+    height: 35vw;
+    width: 35vw;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero3 {
+    background: linear-gradient(#213448, #547792);
+    height: 35vw;
+    position: absolute;
+    width: 35vw;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+    padding: 0 2vw 2vw;
+}
+
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block; 
+    animation: move 4.9s linear none infinite; 
+
+}
+#moving-text h1{
+    font-size: 8vw; 
+    display: inline-block;  
+}
+
+#circle{
+    height: 40px;
+    width: 40px;
+    background-color: #547792;
+    border-radius: 50%;
+    display: inline-block;  
+}
+
+@keyframes move {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    } 
+    
+}
+
+#page2-bottom {
+    height: 80vh;
+    width: 100%;
+    padding: 4.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 9;
+}
+#page2-bottom h1 {
+   font-size: 4vw;
+   width: 55%;
+   line-height: 4vw;
+}
+#bottom-part2{
+    width: 20% ;
+}
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #0000003c;
+}
+#bottom-part2 p{
+    font-weight: 200;
+}
+
+#page2 #bigcircle{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 40%;
+    left: 25%;
+    filter: blur(20px);
+    animation-name: bigcircle;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+@keyframes bigcircle{
+    from{
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+    
+}
+
+#page3{
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 3vw 0;
+}
+#page3 h1{
+    padding-left: 2vw;
+}
+
+#elem{
+    height: 100px;
+    width: 100%;
+    position: relative;
+    border-bottom: 0.1px solid #0000003f;
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    overflow: hidden;
+}
+
+#elem li{
+    position: relative;
+    z-index: 9
+}
+#elem .overlay{
+    height: 100%;
+    width: 100%;
+    background-color:#94B4C1 ;
+    position: absolute; 
+    left: 0;
+    top: -100%;
+    transition: all ease 0.2s;
+
+}
+
+#elem:hover .overlay{
+    top: 0;
+}
+
+#fixed-image {
+    height: 30vw;
+    width: 24vw;
+    /* background-color: red; */
+    border-radius: 15px;
+    position: fixed;
+    z-index: 99;
+    left: 50%;
+    top: 10%;
+    display: none;
+    background-size: cover;
+    background-position: center;
+}
+
+#main{
+    /* background-color: black; */
+    position: relative;
+    z-index: 10;
+    min-height: 100vh;
+}
+#page4{
+    height: 80vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    padding: 7vw;
+    position: relative;
+}
+#page4 h1{
+    padding-top: 1vw;
+    position: absolute;
+    font-size: 2.5vw;
+    top: 5%;
+    display: flex;
+    left: 43%;
+}
+.swiper {
+      width: 100%;
+      height: 100%;
+
+    }
+
+    .swiper-slide {
+        width: 30%;
+      font-size: 18px;
+      
+      border-left: 1px solid #00000044;
+    }
+
+.swiper-slide {
+    width: 30%;
+    height: auto;
+    padding: 1rem;
+}
+
+.swiper-pagination-bullet {
+    background: rgba(0,0,0,0.2);
+    opacity: 1;
+}
+
+
+/* Compact Project Slides */
+.project-slide {
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 300px; /* Reduced from 500px */
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.08);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem; /*Reduced from 2rem*/
+    background: linear-gradient(to top, rgba(0,0,0,0.85), transparent);
+    color: white;
+    transform: translateY(80px); /* Reduced from 100px */
+    transition: transform 0.4s ease;
+}
+
+.swiper-slide-active .project-info {
+    transform: translateY(0);
+}
+
+.tech-stack {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem; /* Reduced from 0.5rem */
+    margin: 0.8rem 0; /* Reduced from 1rem */
+}
+
+.tech-stack span {
+    background-color: #518dbb;
+    padding: 0.25rem 0.7rem; /* Slightly smaller */
+    border-radius: 18px;
+    font-size: 0.75rem; /* Smaller text */
+}
+
+.project-features {
+    margin: 0.8rem 0; /* Reduced from 1rem */
+    padding-left: 0.8rem; /* Reduced from 1rem */
+    font-size: 0.85rem; /* Slightly smaller */
+    line-height: 1.5;
+    font-weight: 200;
+}
+
+.project-features li {
+    margin-bottom: 0.4rem; /* Reduced from 0.5rem */
+}
+
+.project-links {
+    display: flex;
+    gap: 1.2rem; /* Reduced from 1.5rem */
+    margin-top: 1.2rem; /* Reduced from 1.5rem */
+}
+
+.project-links a {
+    font-size: 0.85rem; /* Slightly smaller */
+    /* Other properties remain the same */
+}
+
+/* Swiper adjustments for compact size */
+.swiper {
+    padding: 1.5rem 0 3rem !important; /* Reduced padding */
+}
+
+.swiper-slide {
+    width: 40% !important; /* Narrower slides */
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .swiper {
+      width: 100%;
+      height: 60%;
+
+    }
+    .project-slide {
+        height: 320px; /* Even more compact on mobile */
+    }
+    
+    .swiper-slide {
+        width: 75% !important; /* Adjusted for mobile */
+    }
+    
+    .project-info {
+        padding: 1rem; /* Tighter padding */
+    }
+    
+    .project-features {
+        font-size: 0.8rem;
+    }
+    
+    .project-links {
+        gap: 0.8rem;
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    #page4{
+        height: 80vh;
+        width: 100%;
+        background-color: #EFEAE3;
+        padding: 7vw;
+        position: relative;
+    }
+    
+    #page4 h1{
+        font-size: 8vw;
+        position: relative;
+        left: 24%;
+        margin-bottom: 5vh;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 60%;
+
+    }
+    .project-slide {
+        
+        height: 300px; /* Most compact for small devices */
+    }
+    
+    .swiper-slide {
+        width: 82% !important;
+       
+    }
+    
+    .tech-stack span {
+        padding: 0.2rem 0.6rem;
+        font-size: 0.7rem;
+    }
+}
+
+
+
+.swiper-pagination-bullet-active {
+    background: #518dbb;
+}     */
+
+#page4-bottom{
+    height: 115vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    
+    
+} 
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5vw;
+    
+    margin-bottom: 3rem;
+}
+.skill {
+    text-align: center;
+    padding: 1rem;
+    /* background: var(--light-color); */
+    border-radius: 10px;
+    border: 1px solid #0000003f;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+@media (max-width: 600px) {
+
+      #page4 {
+        height: auto; /* Remove fixed height */
+        min-height: 60vh; /* Adjust this value as needed */
+        padding-bottom: 2vw; /* Reduce bottom padding */
+    }
+
+   #page4-bottom h2{
+       font-size: 8vw;
+   } 
+
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 1vh;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5vw;
+    
+    margin-bottom: 3rem;
+}
+.skill {
+    text-align: center;
+    padding: 1rem;
+    /* background: var(--light-color); */
+    border-radius: 10px;
+    border: 1px solid #0000003f;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.skill h3{
+    font-size: 4vw;
+    
+}
+.skill p{
+    font-size: 3vw;
+    
+}
+}
+
+#page5{
+        padding-top: 1vh;
+
+    height: 100vh;
+    width: 100%;
+    /* background-color: aqua; */
+    position: relative;
+    /* border-bottom:1px solid white; */
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+}
+
+.social-icon {
+    font-size: 1.8rem;
+    color: white;
+    transition: transform 0.3s;
+    
+    
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #94B4C1;
+}
+
+
+@media (max-width:600px){
+    #page5{
+        padding-top: 1vh;
+
+    height: 25vh;
+    width: 100%;
+    /* background-color: aqua; */
+    position: relative;
+    /* border-bottom:1px solid white; */
+}
+
+.social-links {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.social-icon {
+    scale: 0.6;
+    font-size: 1.8rem;
+    color: white;
+    transition: transform 0.3s;
+    
+    
+}
+
+.social-icon:hover {
+    transform: translateY(-3px);
+    color: #94B4C1;
+}
+
+}
+
+
+#footer{
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    /* padding: 1vw 3vw ; */
+}
+#footer h1{
+    font-size: 16vw;
+    display: flex;
+    justify-content: center;
+}
+
+#footer-div{
+    height: 80vh;
+    width: 100%;
+    background-color: #547792;
+        filter: blur(7px);
+
+    top: 0; 
+    display: flex;
+}
+
+#bigcircle0{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 10%;
+    left: -20%;
+    filter: blur(20px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle1{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 10%;
+    left: 0%;
+    filter: blur(20px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle2{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 10%;
+    left: 20%;
+    filter: blur(20px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle3{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 10%;
+    left: 40%;
+    filter: blur(20px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle4{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 10%;
+    left: 60%;
+    filter: blur(20px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle5{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 10%;
+    left: 80%;
+    filter: blur(20px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:ease-in-out;
+}
+
+@media (max-width:600px){
+    #footer{
+    position: fixed;
+    z-index: 9;
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+    color: white;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    /* padding: 1vw 3vw ; */
+}
+#footer h1{
+    font-size: 18vw;
+    display: flex;
+    justify-content: center;
+}
+
+#footer-div{
+    height: 20vh;
+    margin-bottom: 3vh;
+    width: 100%;
+    background-color: #547792;
+    
+    top: 0; 
+    display: flex;
+}
+
+#bigcircle0{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 75%;
+    left: -20%;
+    filter: blur(5px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle1{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 75%;
+    left: 0%;
+    filter: blur(5px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle2{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 75%;
+    left: 20%;
+    filter: blur(5px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle3{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 75%;
+    left: 40%;
+    filter: blur(5px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle4{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 75%;
+    left: 60%;
+    filter: blur(5px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 3s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+#bigcircle5{
+    height: 35vw;
+    width: 35vw;
+    position: absolute;
+    border-radius: 50%;
+    background:linear-gradient(to top, #213448, #547792);
+    top: 75%;
+    left: 80%;
+    filter: blur(5px);
+    animation-name: bigcircle;
+    animation-duration: 4.9s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function:ease-in-out;
+}
+}
+
+@keyframes bigcircle{
+    /* from{
+        filter: blur(20px);
+        transform: translate(10%, -10%) skew(0);
+    }
+    to{
+        filter: blur(30px);
+        transform: translate(-10%, 10%) skew(-12deg);
+    } */
+     0%{
+        filter: blur(20px);
+        transform: translate(10%, -25%) skew(0);
+    }
+    50%{
+        filter: blur(20px);
+        transform: translate(0%, -18%) skew(0);
+    }
+    100%{
+        filter: blur(20px);
+        transform: translate(-20%, -10%) skew(0);
+    }
+
+}
+
+#footer-bottom{
+    height: 8vh;
+    width: 100%;
+    border-top: 1px solid #dadada
+}
+
+
+
+#full-scr{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border: 1px solid #000;
+    position: fixed;
+    z-index: 99;
+    top: -100%;
+    transition: all ease 0.5s;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-top: 70px;
+}
+
+#full-div1{
+    height: 50%;
+    width: 100%;
+    background-color: #EFEAE3;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+
+/* Add these styles to your CSS */
+#full-div1 {
+  display: flex;
+  justify-content: flex-end; /* Align to right */
+  align-items: center;
+  padding-right: 5vw; /* Match your nav padding */
+  height: 100%;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh; /* Vertical spacing between items */
+  align-items: flex-end; /* Right-align text */
+}
+
+.mobile-nav h4 {
+  padding: 10px 20px;
+  border: 1px solid #00000075;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #000000bb;
+  transition: all ease 0.4s;
+  position: relative;
+  font-size: 18px;
+  overflow: hidden;
+  text-align: right; /* Ensure text aligns right */
+  width: fit-content; /* Only take needed width */
+}
+
+/* Copy your existing hover effects */
+.mobile-nav h4::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  transition: all ease 0.4s;
+}
+
+.mobile-nav h4:hover::after {
+  bottom: 0;
+  border-radius: 0;
+}
+
+.mobile-nav h4 a {
+  color: #000000bb;
+  text-decoration: none;
+  position: relative;
+  z-index: 9;
+}
+
+.mobile-nav h4:hover a {
+  color: #fff;
+}
+
+/* Mobile adjustments */
+@media (max-width: 600px) {
+  .mobile-nav h4 {
+    font-size: 4vw;
+    padding: 8px 16px;
+  }
+}
+
+  
+@media (max-width: 600px) {
+
+    #main{
+        overflow-x: hidden;
+    }
+    #page1 {
+    min-height: 100vh;
+    width: 100%;
+    padding: 0 0vw ;
+}
+
+nav{
+    padding: 0vw 5vw;
+    background-color: #EFEAE3;
+
+    
+}
+
+nav img{
+    transition: all ease 0.2s;
+    scale: 9vh ;
+    visibility: hidden !important; 
+
+}
+
+#nav-part2 {
+    display: none;
+}
+nav h3{
+    display: block;
+    padding: 2vw 5vw;
+    border: 1px solid #ababab;
+    border-radius: 50px;
+    font-size: 4vw ;
+    font-weight: 200;
+
+}
+
+
+#centre {
+    height: vh;
+    width: 100%;
+    /* background-color: orange; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 1px solid #0000003c;
+    padding: 7vw 5vw;
+    padding-bottom: 10vw;
+    flex-direction: column-reverse;
+    position: relative;
+    z-index: 9;
+}
+
+#left h3{
+    width: 80%;
+    font-size: 5.5vh;
+    text-align: left;
+    line-height: 6vh;
+}
+
+#centre h1{
+    font-size: 17vw;
+    text-align: right;
+    line-height: 15vw ;
+}
+
+#page1 video {
+     position: relative;
+    border-radius: 15px;
+    margin-top: 4vw;
+    height: 43vh;
+    object-fit: cover;
+    object-position: center;
+    width: 92%;
+    margin-left: 4%;
+}
+
+#hero-shape {
+    position: absolute;
+    width: 76vw;
+    height: 56vw;
+    right: 0;
+    top: 65vh;
+}
+
+#hero1 {
+    background-color: #213448;
+    height: 100%;
+    width: 100%;
+    top: 30%;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+    filter: blur(10px);
+    position: absolute;
+}
+#hero2 {
+    background: linear-gradient(#213448, #547792);
+    height: 35vw;
+    width: 35vw;
+    top: 30%;
+    border-radius: 50%;
+    position: absolute;
+    animation-name: anime2;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    filter: blur(25px);
+}
+
+#hero3 {
+    background: linear-gradient(#213448, #547792);
+    height: 35vw;
+    position: absolute;
+    width: 35vw;
+    top: 30%;
+    border-radius: 50%;
+    filter: blur(25px);
+    animation-name: anime1;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #EFEAE3;
+    position: relative;
+        padding: 8vw 0;
+}
+
+#moving-text{
+    overflow-x: auto;
+    white-space: nowrap;
+}
+#moving-text::-webkit-scrollbar{
+    display: none;
+}
+.con{
+    white-space: nowrap;
+    display: inline-block; 
+    animation: move 4.9s linear none infinite; 
+
+}
+#moving-text h1{
+    font-size: 15vw; 
+    display: inline-block;  
+}
+
+#circle{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #213448;
+    margin: 2vw 2vw;
+}
+
+
+#page2-bottom {
+    height: 90vh;
+        width: 100%;
+        /* background-color: aliceblue; */
+        padding: 10vw 4vw;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-around;
+        position: relative;
+        flex-direction: column;
+        z-index: 9;
+}
+#page2-bottom h1 {
+   font-size: 6vw;
+   width: 55%;
+   line-height: 6vw;
+}
+#bottom-part2{
+        width: 70%;
+        margin-left: 28%;
+}
+#bottom-part2 img{
+    width: 100%;
+    border-radius: 10px;
+}
+#bottom-part2 p{
+        font-weight: 350;
+        margin-top: 2vw;
+        font-size: 4vw;
+}
+
+#page2 #bigcircle{
+        height: 62vw;
+        width: 62vw;
+        position: absolute;
+        border-radius: 50%;
+        background: linear-gradient(to top right, #213448, #547792);
+        top: 26%;
+        left: 25%;
+        filter: blur(20px);
+        animation-name: bigcircle;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: linear;
+}
+
+
+}
+
+#loader{
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    transition: all ease 0.7s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#loader h1{
+    font-size: 4vw;
+    color: transparent;
+    background: linear-gradient(to right,#3299c2,#EFEAE3);
+        background-clip: text;
+
+    -webkit-background-clip: text;
+    position: absolute;
+    opacity: 0;
+    animation-name: load;
+    animation-duration: 1s;
+    animation-delay: 1s;
+    animation-timing-function: linear;
+}
+#loader h1:nth-child(2){
+    animation-delay: 2s;
+}
+#loader h1:nth-child(3){
+    animation-delay: 3s;
+}
+
+@keyframes load {
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media (max-width:600px) {
+    #loader h1{
+        font-size: 9vw;
+      
+    }
+}
+ 
